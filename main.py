@@ -26,7 +26,7 @@ logger = logging.getLogger(__name__)
 class DrumPracticeApp(App):
     """Main application class for the MIDI practice tool."""
 
-    TITLE_BASE = "Drum Practice MIDI Player"
+    TITLE_BASE = "Camina Drummer"
 
     def __init__(self, **kwargs: Any) -> None:
         super().__init__(**kwargs)
@@ -58,7 +58,7 @@ class DrumPracticeApp(App):
         file_btn.bind(on_release=self._open_file_dialog)
         bar.add_widget(file_btn)
 
-        self.current_file_label = Label(text="No file loaded", halign="left", valign="middle", color=get_color_from_hex("#00FF00"))
+        self.current_file_label = Label(text="No file loaded", halign="left", valign="middle", color=get_color_from_hex("#88FF88"))
         self.current_file_label.bind(size=self.current_file_label.setter("text_size"))
         bar.add_widget(self.current_file_label)
         return bar
@@ -68,13 +68,13 @@ class DrumPracticeApp(App):
         controls = BoxLayout(orientation="vertical", spacing=5, padding=5)
 
         # --- Mute drums checkbox ---
-        self.mute_drums_chk = CheckBox(color=get_color_from_hex("#00FF00"))
+        self.mute_drums_chk = CheckBox(color=get_color_from_hex("#88FF88"))
         row_drums = self._row_with_checkboxes((self.mute_drums_chk, "Mute drums"))
         controls.add_widget(row_drums)
         self.mute_drums_chk.bind(active=lambda _, v: setattr(self.player, "mute_drums", v))
 
         # --- Mute accompaniment checkbox ---
-        self.mute_others_chk = CheckBox(color=get_color_from_hex("#00FF00"))
+        self.mute_others_chk = CheckBox(color=get_color_from_hex("#88FF88"))
         row_others = self._row_with_checkboxes((self.mute_others_chk, "Mute accompaniment"))
         controls.add_widget(row_others)
         self.mute_others_chk.bind(active=lambda _, v: setattr(self.player, "mute_others", v))
@@ -83,12 +83,12 @@ class DrumPracticeApp(App):
         tempo_row = BoxLayout(orientation="horizontal", size_hint=(1, None), height=30, spacing=5)
 
         tempo_label = Label(text="Tempo:", size_hint=(None, None), height=30, width=60,
-                            color=get_color_from_hex("#00FF00"))
+                            color=get_color_from_hex("#88FF88"))
         self.tempo_input = TextInput(
             multiline=False,
             size_hint=(1, None),
             height=30,
-            foreground_color=get_color_from_hex("#00FF00"),
+            foreground_color=get_color_from_hex("#88FF88"),
             background_color=get_color_from_hex("#202020")
         )
         self.tempo_mode_spinner = Spinner(
@@ -97,7 +97,7 @@ class DrumPracticeApp(App):
             size_hint=(None, None),
             size=(120, 30),
             background_color=get_color_from_hex("#88FF88"),
-            color=get_color_from_hex("#00FF00")
+            color=get_color_from_hex("#88FF88")
         )
 
         tempo_row.add_widget(tempo_label)
@@ -112,7 +112,7 @@ class DrumPracticeApp(App):
             text="Original BPM: N/A",
             size_hint=(1, None),
             height=30,
-            color=get_color_from_hex("#00FF00")
+            color=get_color_from_hex("#88FF88")
         )
         controls.add_widget(self.original_bpm_label)
 
@@ -122,7 +122,7 @@ class DrumPracticeApp(App):
             text="Play",
             size_hint=(0.5, 1),
             background_color=get_color_from_hex("#88FF88"),
-            color=get_color_from_hex("#00FF00")
+            color=get_color_from_hex("#88FF88")
         )
         stop_btn = Button(
             text="Stop",
@@ -151,7 +151,7 @@ class DrumPracticeApp(App):
                 size_hint=(1, 1),
                 halign="left",
                 valign="middle",
-                color=get_color_from_hex("#00FF00")
+                color=get_color_from_hex("#88FF88")
             )
             label.bind(size=label.setter("text_size"))
             row.add_widget(label)
@@ -160,7 +160,7 @@ class DrumPracticeApp(App):
     @staticmethod
     def _row_with_label_and_widget(label_text: str, widget) -> BoxLayout:
         row = BoxLayout(orientation="horizontal", size_hint=(1, None), height=30, spacing=5)
-        row.add_widget(Label(text=label_text, size_hint=(None, None), height=30, width=120, color=get_color_from_hex("#00FF00")))
+        row.add_widget(Label(text=label_text, size_hint=(None, None), height=30, width=120, color=get_color_from_hex("#88FF88")))
         row.add_widget(widget)
         return row
 
