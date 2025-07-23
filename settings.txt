@@ -1,0 +1,2 @@
+# Path to the GM SoundFont file for FluidSynth:
+soundfont_path = /usr/share/sounds/sf2/FluidR3_GM.sf2
