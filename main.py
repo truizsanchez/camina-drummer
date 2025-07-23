@@ -42,7 +42,7 @@ class DrumPracticeApp(App):
 
     def build(self):
         self._configure_window()
-        Window.clearcolor = get_color_from_hex("#101010")  # Dark gray background
+        Window.clearcolor = get_color_from_hex("#101010")
         root = BoxLayout(orientation="vertical", padding=10, spacing=10)
         root.add_widget(self._build_menu_bar())
         root.add_widget(self._build_main_controls())

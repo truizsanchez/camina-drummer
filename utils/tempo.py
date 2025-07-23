@@ -44,5 +44,3 @@ class TempoUtil:
         except Exception as exc:
             logger.warning(f"Could not read tempo from MIDI: {exc}")
         return 120.0
-
-

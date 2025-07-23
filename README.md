@@ -27,7 +27,7 @@ Practicing drums with commercial audio tracks can be limiting: tempo is fixed, d
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-user/camina-drummer.git
+git clone https://github.com/truizsanchez/camina-drummer.git
 cd camina-drummer
 
 # Install dependencies
