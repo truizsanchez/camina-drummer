@@ -72,6 +72,7 @@ Once launched:
 - BPM estimation is based on all `set_tempo` events and reflects the average tempo weighted by duration. However, the tempo input field applies a single factor globally and does not reproduce tempo maps.
 - Currently only supports `.mid` files.
 - GUI is functional but very minimal (reminiscent of old-school "keygens").
+- MIDI playback depends on your SoundFont and system synthesizer. The result may sound closer to a classic RPG or dungeon synth 🐉 than a live performance — but it's still rhythmically accurate and great for practice.
 
 ## Roadmap
 
